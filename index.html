@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>we have such sights to show you</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      width: 100vw;
+      height: 100vh;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      min-width: 100vw;
+    }
+    img {
+      max-width: 90vw;
+      max-height: 90vh;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <img id="randomImage" src="" alt="Random image" />
+  <script>
+    const images = [
+	'240705-34.jpg'
+    ];
+
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const chosenImage = images[randomIndex];
+
+    document.getElementById('randomImage').src = chosenImage;
+  </script>
+</body>
+</html>
+
