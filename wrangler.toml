@@ -1,0 +1,4 @@
+name = "random-photo-worker"
+main = "src/index.ts"
+assets = "./img"
+
