@@ -4,7 +4,6 @@ const path = require('path');
 const IMG_DIR = path.join(__dirname, '../img');
 const OUTPUT_FILE = path.join(__dirname, '../src/image-list.ts');
 
-// Filter for common image extensions
 const IMAGE_EXTENSIONS = /\.(jpe?g|png|gif|webp|bmp|svg)$/i;
 
 const files = fs.readdirSync(IMG_DIR)
