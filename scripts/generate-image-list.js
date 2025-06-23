@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = import('fs');
+const path = import('path');
 
 const IMG_DIR = path.join(__dirname, '../img');
 const OUTPUT_FILE = path.join(__dirname, '../src/image-list.ts');
