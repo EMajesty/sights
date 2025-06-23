@@ -1,4 +1,3 @@
 name = "sights"
 main = "src/index.ts"
-assets = "./img"
-
+assets = { directory = "./img" }
