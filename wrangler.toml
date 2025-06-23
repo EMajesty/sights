@@ -1,4 +1,4 @@
 name = "sights"
 main = "src/index.ts"
-compatibility_date = "2025-06-24"
+compatibility_date = "2025-06-23"
 assets = { directory = "./img" }
