@@ -1,7 +1,7 @@
 {
   "scripts": {
     "generate:image-list": "node scripts/generate-image-list.js",
-    "build": "npm run generate:image-list && wrangler deploy"
+    "build": "npm run generate:image-list && npx wrangler deploy"
   }
 }
 
