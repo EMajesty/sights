@@ -29,13 +29,13 @@ export default {
           }
         </style>
 	<script>
-          let seconds = 10;
+          let seconds = 15;
           function updateTimer() {
             if (seconds === 0) {
               window.location.reload();
             } else {
               seconds--;
-              setTimeout(updateTimer, 1500);
+              setTimeout(updateTimer, 1000);
             }
           }
           window.onload = updateTimer;
