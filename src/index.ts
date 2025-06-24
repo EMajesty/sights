@@ -6,11 +6,50 @@ export default {
       return new Response("No images found.", { status: 404 });
     }
     const randomFile = IMAGE_FILES[Math.floor(Math.random() * IMAGE_FILES.length)];
-    // Serve the image from the bundled assets
+    const imageUrl = `/${randomFile}`;
+
+    const html = `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <title>we have such sights to show you</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+          body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #222;
+          }
+          img {
+            max-width: 90vw;
+            max-height: 80vh;
+            box-shadow: 0 4px 32px #000a;
+            border-radius: 10px;
+            background: #fff;
+          }
+        </style>
+      </head>
+      <body>
+        <img src="${imageUrl}" alt="Random Image" />
+      </body>
+      </html>
+    `;
+
+    // If the request is for the root, serve the HTML page
     const url = new URL(request.url);
-    url.pathname = "/" + randomFile;
-    // @ts-ignore: __STATIC_CONTENT is injected by Wrangler
-    return env.ASSETS.fetch(url, request);
+    if (url.pathname === "/" || url.pathname === "/index.html") {
+      return new Response(html, {
+        headers: { "Content-Type": "text/html; charset=UTF-8" },
+      });
+    }
+
+    // Otherwise, try to serve the static asset (the image)
+    // @ts-ignore: ASSETS binding is provided by Wrangler
+    return env.ASSETS.fetch(request);
   }
 };
 
