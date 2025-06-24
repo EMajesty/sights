@@ -22,14 +22,10 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #222;
           }
           img {
             max-width: 90vw;
             max-height: 80vh;
-            box-shadow: 0 4px 32px #000a;
-            border-radius: 10px;
-            background: #fff;
           }
         </style>
       </head>
