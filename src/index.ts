@@ -35,7 +35,7 @@ export default {
               window.location.reload();
             } else {
               seconds--;
-              setTimeout(updateTimer, 1000);
+              setTimeout(updateTimer, 1500);
             }
           }
           window.onload = updateTimer;
