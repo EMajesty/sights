@@ -28,18 +28,6 @@ export default {
             max-height: 80vh;
           }
         </style>
-	<script>
-          let seconds = 15;
-          function updateTimer() {
-            if (seconds === 0) {
-              window.location.reload();
-            } else {
-              seconds--;
-              setTimeout(updateTimer, 1000);
-            }
-          }
-          window.onload = updateTimer;
-        </script>
       </head>
       <body>
         <img src="${imageUrl}" onclick="window.location.reload()" />
