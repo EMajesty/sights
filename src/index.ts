@@ -30,7 +30,7 @@ export default {
         </style>
       </head>
       <body>
-        <img src="${imageUrl}" alt="Random Image" />
+        <img src="${imageUrl}" onclick="window.location.reload()" />
       </body>
       </html>
     `;
