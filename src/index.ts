@@ -41,6 +41,7 @@ export default {
             margin-bottom: 1.5em;
             color: #000;
             user-select: none;
+	    height: 5vw;
           }
         </style>
       </head>
