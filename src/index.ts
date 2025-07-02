@@ -22,12 +22,25 @@ export default {
             min-height: 100vh;
             margin: 0;
             display: flex;
-            justify-content: center;
+	    flex-direction: column;
+            justify-content: space-between;
             align-items: center;
+	    min-height: 100vh;
+            position: relative;
           }
           img {
             max-width: 90vw;
             max-height: 80vh;
+          }
+	  .logo-top {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+            color: #000;
+            user-select: none;
           }
         </style>
       </head>
