@@ -8,6 +8,8 @@ export default {
     const randomFile = IMAGE_FILES[Math.floor(Math.random() * IMAGE_FILES.length)];
     const imageUrl = `/img/${randomFile}`;
 
+    const logoUrl = `/svg/logo-top.svg`;
+
     const html = `
       <!DOCTYPE html>
       <html lang="en">
@@ -30,6 +32,7 @@ export default {
         </style>
       </head>
       <body>
+      	<img src="${logoUrl}" />
         <img src="${imageUrl}" onclick="window.location.reload()" />
       </body>
       </html>
