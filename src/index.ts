@@ -8,10 +8,6 @@ export default {
     const randomFile = IMAGE_FILES[Math.floor(Math.random() * IMAGE_FILES.length)];
     const imageUrl = `/img/${randomFile}`;
 
-    // Fetch SVGs from static assets and inline them
-    // @ts-ignore: ASSETS binding is provided by Wrangler
-    const topLogoSVG = await env.ASSETS.fetch(new Request("/svg/logo-top.svg"));
-
     const html = `
       <!DOCTYPE html>
       <html lang="en">
@@ -34,7 +30,6 @@ export default {
         </style>
       </head>
       <body>
-	<div class="logo-top">${topLogoSVG}</div>
         <img src="${imageUrl}" onclick="window.location.reload()" />
       </body>
       </html>
