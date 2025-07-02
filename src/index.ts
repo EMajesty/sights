@@ -10,11 +10,7 @@ export default {
 
     // Fetch SVGs from static assets and inline them
     // @ts-ignore: ASSETS binding is provided by Wrangler
-    const topLogoResp = await env.ASSETS.fetch(new Request("/svg/logo-top.svg"));
-    // // @ts-ignore
-    // const bottomLogoResp = await env.ASSETS.fetch(new Request("/svg/logo-bottom.svg"));
-    const topLogoSVG = await topLogoResp.text();
-    // const bottomLogoSVG = await bottomLogoResp.text();
+    const topLogoSVG = await env.ASSETS.fetch(new Request("/svg/logo-top.svg"));
 
     const html = `
       <!DOCTYPE html>
