@@ -6,7 +6,15 @@ export default {
       return new Response("No images found.", { status: 404 });
     }
     const randomFile = IMAGE_FILES[Math.floor(Math.random() * IMAGE_FILES.length)];
-    const imageUrl = `/${randomFile}`;
+    const imageUrl = `/img/${randomFile}`;
+
+    // Fetch SVGs from static assets and inline them
+    // @ts-ignore: ASSETS binding is provided by Wrangler
+    const topLogoResp = await env.ASSETS.fetch(new Request("/svg/logo-top.svg"));
+    // @ts-ignore
+    const bottomLogoResp = await env.ASSETS.fetch(new Request("/svg/logo-bottom.svg"));
+    const topLogoSVG = await topLogoResp.text();
+    const bottomLogoSVG = await bottomLogoResp.text();
 
     const html = `
       <!DOCTYPE html>
@@ -27,9 +35,13 @@ export default {
             max-width: 90vw;
             max-height: 80vh;
           }
+	  .logo-top {
+		  color: #000;
+	  }
         </style>
       </head>
       <body>
+	<div class="logo-top">${topLogoSVG}</div>
         <img src="${imageUrl}" onclick="window.location.reload()" />
       </body>
       </html>
