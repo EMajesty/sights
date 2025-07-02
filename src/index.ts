@@ -32,21 +32,9 @@ export default {
             max-width: 90vw;
             max-height: 80vh;
           }
-	  .logo-top {
-            width: 100vw;
-	    height: 10vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 1.5em;
-            margin-bottom: 1.5em;
-            color: #000;
-            user-select: none;
-          }
         </style>
       </head>
       <body>
-      	<div class="logo-top"> <img src="${logoUrl}" /> </div>
         <div class="main-content"> <img src="${imageUrl}" onclick="window.location.reload()" /> </div>
       </body>
       </html>
