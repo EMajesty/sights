@@ -34,6 +34,7 @@ export default {
           }
 	  .logo-top {
             width: 100vw;
+	    height: 10vh;
             display: flex;
             justify-content: center;
             align-items: center;
