@@ -32,8 +32,8 @@ export default {
         </style>
       </head>
       <body>
-      	<img src="${logoUrl}" />
-        <img src="${imageUrl}" onclick="window.location.reload()" />
+      	<div class="logo-top"> <img src="${logoUrl}" /> </div>
+        <div class="main-content"> <img src="${imageUrl}" onclick="window.location.reload()" /> </div>
       </body>
       </html>
     `;
