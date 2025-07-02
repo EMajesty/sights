@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const IMG_DIR = path.join(__dirname, '../img');
+const IMG_DIR = path.join(__dirname, '../public/img');
 const OUTPUT_FILE = path.join(__dirname, '../src/image-list.ts');
 
 const IMAGE_EXTENSIONS = /\.(jpe?g|png|gif|webp|bmp|svg)$/i;
