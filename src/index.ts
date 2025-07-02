@@ -41,8 +41,11 @@ export default {
             margin-bottom: 1.5em;
             color: #000;
             user-select: none;
-	    height: 5vw;
           }
+	  .logo-top svg {
+	    height: 5vh;
+	    display: block;
+	  }
         </style>
       </head>
       <body>
