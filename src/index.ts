@@ -31,9 +31,6 @@ export default {
             max-width: 90vw;
             max-height: 80vh;
           }
-	  .logo-top {
-		  color: #000;
-	  }
         </style>
       </head>
       <body>
