@@ -43,8 +43,11 @@ export default {
             user-select: none;
           }
 	  .logo-top svg {
-	    height: 5vh;
-	    display: block;
+		width: 10vw;
+  		max-width: 80px;
+  		min-width: 32px;
+  		height: auto;
+  		display: block;
 	  }
         </style>
       </head>
