@@ -42,13 +42,6 @@ export default {
             color: #000;
             user-select: none;
           }
-	  .logo-top svg {
-		width: 10vw;
-  		max-width: 80px;
-  		min-width: 32px;
-  		height: auto;
-  		display: block;
-	  }
         </style>
       </head>
       <body>
